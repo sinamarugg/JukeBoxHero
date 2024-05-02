@@ -1,41 +1,52 @@
 <?php
 
+include 'spotifyconfig.php';
 include 'extract.php';
 
-//make map with lat / lon to location
+// Endpunkt zum Anfordern eines Zugriffstokens
+$url = 'https://accounts.spotify.com/api/token';
 
+// Erstellen einer neuen cURL-Sitzung
+$ch = curl_init($url);
 
+// Vorbereiten der POST-Felder
+$data = 'grant_type=client_credentials';
 
-function weather_condition($precipitation, $cloud_cover) {
-    if ($cloud_cover <= 80 && $precipitation == 0) {
-        return 'sunny';
-    } elseif ($cloud_cover > 80 && $precipitation < 5) {
-        return 'cloudy';
-    } elseif ($precipitation >= 5) {
-        return 'rainy';
-   }
+// Setzen des HTTP-Headers
+$headers = array(
+    'Authorization: Basic ' . $credentials,
+    'Content-Type: application/x-www-form-urlencoded'
+);
+
+// Setzen der cURL-Optionen
+curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_POST, true);
+curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+
+// Ausführen der cURL-Sitzung
+$response = curl_exec($ch);
+curl_close($ch);
+
+// Dekodieren der Antwort, um das Zugriffstoken zu erhalten
+$responseData = json_decode($response, true);
+$accessToken = $responseData['access_token'];
+
+$newList = [];
+
+// Check if 'songList' is available in data and is an array
+if (isset($songData['songList']) && is_array($songData['songList'])) {
+    // Iterate over each song in the songList
+    foreach ($songData['songList'] as $song) {
+        $newList[] = [
+            'title' => $song['title'],
+            'interpret' => $song['artist']['name'],
+            'duration' => $song['duration'],
+            'playedAt' => $song['date']
+        ];
+    }
+} else {
+    echo "Error: 'songList' key not found or is not an array.";
 }
 
-//transform data
-foreach ($weather_data as $index => $item) { 
-
-    //round temperature to integer
-   $weather_data[$index]['temperature_2m'] = round($item['temperature_2m']);
-
-   //convert lat / lon to location
-    $coordinates = $item['latitude'] . ',' . $item['longitude'];
-
-    // use map to get location
-    $weather_data[$index]['location'] = $locations[$coordinates];
-
-    unset($weather_data[$index]['latitude']);
-    unset($weather_data[$index]['longitude']);
-
-    $weather_data[$index]['condition'] = weather_condition($item['precipitation'], $item['cloud_cover']);
-
-
-}
-$weather_data = json_encode($weather_data);
-
-echo $weather_data;
 ?>

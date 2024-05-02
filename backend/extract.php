@@ -34,7 +34,7 @@ curl_close($ch);
 
 //speichere hier alle Daten in variabeln
 
-$data = json_decode($output, true);
+$songData = json_decode($output, true);
 
 //echo $output;
 
