@@ -1,7 +1,5 @@
 <?php
 
-//echo "Hello World!";
-
 // Set default timezone
 date_default_timezone_set('Europe/Berlin'); // This timezone is UTC+2 during daylight saving time
 
@@ -23,7 +21,6 @@ $url = "https://il.srgssr.ch/integrationlayer/2.0/srf/songList/radio/byChannel/6
 
 $ch = curl_init($url);
 
-//curl_setopt($ch, CURLOPT_URL, $url);
 
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
@@ -36,29 +33,5 @@ curl_close($ch);
 
 $songData = json_decode($output, true);
 
-//echo $output;
-
-
-// make new array with needed information
-/* $weather_data = [];
-foreach ($data as $item) {
-    $latitude = $item['latitude'];
-    $longitude = $item['longitude'];
-    $temperature_2m = $item['current']['temperature_2m'];  
-    $precipitation = $item['current']['precipitation'];
-    $cloud_cover = $item['current']['cloud_cover'];
-
-    $weather_data[] = [
-        'latitude' => $latitude,
-        'longitude' => $longitude,
-        'temperature_2m' => $temperature_2m,
-        'precipitation' => $precipitation,
-        'cloud_cover' => $cloud_cover
-    ];
-} */
-/* echo "<pre>";
-echo $weather_data[0]['latitude'];
-echo "</pre>";
- */
 
 ?>
