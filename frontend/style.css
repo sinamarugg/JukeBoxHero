@@ -5,10 +5,10 @@ body {
     padding: 20px;
     background-color: #f0f0f0;
     color: #333;
-    background-image: url('img/HiGu Schwarz-weiss.svg')
-    background-repeat: no-repeat;
-    background-size: cover;
-    
+    background-image: url('./img/Hintergrund.png');
+    background-repeat: repeat-y;
+    /* background-image: url('./img/Hintergrund.svg');
+    background-repeat: repeat-y; */
   }
   
   h1, h2 {
@@ -77,4 +77,5 @@ body {
         min-height: 150px;
         min-width: 100px;
     }
+  
     
