@@ -1,0 +1,59 @@
+/* Grundlegende Einstellungen */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f0f0;
+    color: #333;
+  }
+  
+  h1, h2 {
+    color: #333;
+  }
+  
+  /* Grid mit farbigen Feldern */
+  
+  .knalligebox {
+    display: grid;
+    grid-row-gap: 5px;
+    grid-column-gap: 5px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+    
+    #feld_links_blau {
+    grid-area: 2 / 1 / 7 / 2;
+    background-color: blue;
+    }
+    
+    #rechts_gelb {
+    grid-area: 3 / 2 / 4 / 3;
+    background-color: yellow;
+    }
+    
+    #rechts_rosa {
+    grid-area: 4 / 2 / 5 / 3;
+    background-color: pink;
+    }
+    
+    #rechts_violet {
+    grid-area: 5 / 2 / 6 / 3;
+    background-color: violet;
+    }
+    
+    #rechts_oben_leer {
+    grid-area: 1 / 2 / 3 / 3;
+    }
+    
+    #rechts_unter_leer {
+    grid-area: 6 / 2 / 8 / 3;
+    }
+    
+    #links_unten_leer {
+    grid-area: 7 / 1 / 8 / 2;
+    }
+    
+    #links_oben_leer {
+    grid-area: 1 / 1 / 2 / 2;
+    }
+    
