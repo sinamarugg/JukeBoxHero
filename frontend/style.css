@@ -5,6 +5,10 @@ body {
     padding: 20px;
     background-color: #f0f0f0;
     color: #333;
+    background-image: url('img/HiGu Schwarz-weiss.svg')
+    background-repeat: no-repeat;
+    background-size: cover;
+    
   }
   
   h1, h2 {
@@ -15,30 +19,53 @@ body {
   
   .knalligebox {
     display: grid;
-    grid-row-gap: 5px;
-    grid-column-gap: 5px;
+    grid-row-gap: 20px;
+    grid-column-gap: 30px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     }
     
-    #feld_links_blau {
-    grid-area: 2 / 1 / 7 / 2;
-    background-color: blue;
+    #links_blau {
+    grid-area: 2 / 1 / 6 / 2;
+    background-color: #0FD7D2;
+    color: white; 
+    min-height: 50px;
+    padding-top: 50px; /* Reduziertes oberes Padding von 20px auf 10px */
+    padding-right: 25px; /* Angenommenes Padding rechts */
+    padding-bottom: 20px; /* Angenommenes Padding unten */
+    padding-left: 25px; /* Angenommenes Padding links */
+    display: flex;
+    justify-content: center; /* Zentriert den Inhalt horizontal */
+    font-size: 50px; /* Setzt die Schriftgröße */
     }
     
+    #rechts_weiss {
+    grid-area: 2 / 2 / 3 / 3;
+    background-color: #FFFFFF;
+    color: black; 
+    min-height: 50px;
+    padding-top: 50px; /* Reduziertes oberes Padding von 20px auf 10px */
+    padding-right: 25px; /* Angenommenes Padding rechts */
+    padding-bottom: 20px; /* Angenommenes Padding unten */
+    padding-left: 25px; /* Angenommenes Padding links */
+    display: flex;
+    justify-content: center; /* Zentriert den Inhalt horizontal */
+    font-size: 50px; /* Setzt die Schriftgröße */
+    }
+        
     #rechts_gelb {
     grid-area: 3 / 2 / 4 / 3;
-    background-color: yellow;
+    background-color: #D1D500;
     }
     
     #rechts_rosa {
     grid-area: 4 / 2 / 5 / 3;
-    background-color: pink;
+    background-color: #F542A9;
     }
     
     #rechts_violet {
     grid-area: 5 / 2 / 6 / 3;
-    background-color: violet;
+    background-color: #A678EE;
     }
     
     #rechts_oben_leer {
@@ -55,5 +82,10 @@ body {
     
     #links_oben_leer {
     grid-area: 1 / 1 / 2 / 2;
+    }
+
+    #feld_links_blau, #rechts_gelb, #rechts_rosa, #rechts_violet {
+        min-height: 150px;
+        min-width: 100px;
     }
     
