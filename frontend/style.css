@@ -19,14 +19,14 @@ body {
   
   .knalligebox {
     display: grid;
-    grid-row-gap: 20px;
+    grid-row-gap: 40px;
     grid-column-gap: 30px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     }
     
     #links_blau {
-    grid-area: 2 / 1 / 6 / 2;
+    grid-area: 2 / 2 / 6 / 3;
     background-color: #0FD7D2;
     color: white; 
     min-height: 50px;
@@ -40,7 +40,7 @@ body {
     }
     
     #rechts_weiss {
-    grid-area: 2 / 2 / 3 / 3;
+    grid-area: 2 / 4 / 3 / 5;
     background-color: #FFFFFF;
     color: black; 
     min-height: 50px;
@@ -54,37 +54,26 @@ body {
     }
         
     #rechts_gelb {
-    grid-area: 3 / 2 / 4 / 3;
+    grid-area: 3 / 4 / 4 / 5;
     background-color: #D1D500;
     }
     
     #rechts_rosa {
-    grid-area: 4 / 2 / 5 / 3;
+    grid-area: 4 / 4 / 5 / 5;
     background-color: #F542A9;
     }
     
-    #rechts_violet {
-    grid-area: 5 / 2 / 6 / 3;
-    background-color: #A678EE;
-    }
-    
-    #rechts_oben_leer {
-    grid-area: 1 / 2 / 3 / 3;
-    }
-    
-    #rechts_unter_leer {
-    grid-area: 6 / 2 / 8 / 3;
-    }
-    
-    #links_unten_leer {
-    grid-area: 7 / 1 / 8 / 2;
-    }
-    
-    #links_oben_leer {
-    grid-area: 1 / 1 / 2 / 2;
+    #rechts_blau {
+    grid-area: 5 / 4 / 6 / 5;
+    background-color: #00629D;
     }
 
-    #feld_links_blau, #rechts_gelb, #rechts_rosa, #rechts_violet {
+    #unten_violet {
+    grid-area: 7 / 2 / 10 / 5;
+    background-color: #00629D;
+    }
+
+    #feld_links_blau, #rechts_gelb, #rechts_rosa, #rechts_blau, #unten_violet{
         min-height: 150px;
         min-width: 100px;
     }
