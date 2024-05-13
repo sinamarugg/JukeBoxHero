@@ -11,7 +11,23 @@ body {
     background-repeat: repeat-y; */
   }
   
-  h1, h2 {
+  h1 {
+    color: #ffffff;
+    font-size: 96;
+    font-family: 'Koulen', sans-serif;
+    font-weight: regular;
+    font-style: normal;
+  }
+
+  h2 {
+    color: #ffffff;
+    font-size: 50;
+    font-family: 'Koulen', sans-serif;
+    font-weight: regular;
+    font-style: normal;
+  }
+
+  p {
     color: #333;
   }
   
