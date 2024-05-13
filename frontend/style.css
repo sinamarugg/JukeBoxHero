@@ -27,7 +27,7 @@ body {
     
     #links_blau {
     grid-area: 2 / 1 / 6 / 2;
-    background-color: #0FD7D2;
+    background-color: #96C3C7;
     color: white; 
     min-height: 50px;
     padding-top: 50px; /* Reduziertes oberes Padding von 20px auf 10px */
@@ -51,26 +51,28 @@ body {
     display: flex;
     justify-content: center; /* Zentriert den Inhalt horizontal */
     font-size: 50px; /* Setzt die Schriftgröße */
+    font-weight: bold; /* Setzt die Schrift auf fett */
+    font-family: 'Koulen'sans-serif; /* Setzt die Schriftart auf 'Koulen' */
     }
         
     #rechts_gelb {
     grid-area: 3 / 2 / 4 / 3;
-    background-color: #D1D500;
+    background-color: #D6B32E;
     }
     
     #rechts_rosa {
     grid-area: 4 / 2 / 5 / 3;
-    background-color: #F542A9;
+    background-color: #DA9FA9;
     }
     
     #rechts_blau {
     grid-area: 5 / 2 / 6 / 3;
-    background-color: #A678EE;
+    background-color: #55397F;
     }
 
     #unten_violet {
     grid-area: 7 / 1 / 10 / 3;
-    background-color: #00629D;
+    background-color: #A678EE;
     }
 
     #feld_links_blau, #rechts_gelb, #rechts_rosa, #rechts_blau, #unten_violet{
@@ -78,4 +80,5 @@ body {
         min-width: 100px;
     }
   
+    
     
