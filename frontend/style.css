@@ -48,6 +48,8 @@ body {
     font-family: "Freeman", sans-serif; /* Verwende die Schriftart "Freeman", falls verfügbar, andernfalls eine generische sans-serif Schriftart */
     font-weight: 400; /* Normalgewicht (Regular) */
     font-style: normal;
+    margin: 0;
+    padding: 0;
   } 
 
   p {
@@ -73,7 +75,7 @@ body {
     grid-row-gap: 3%;
     grid-column-gap: 7%;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;;
+    grid-template-rows: 0.3fr 0.5fr 0.5fr 0.5fr 1fr;
     }
     
     #links_blau {
@@ -82,6 +84,7 @@ body {
     color: white; 
     /*min-height: 50px;*/
     padding: 1em 1em 1em 1em;
+    text-align: center;
     /*display: flex;*/
     justify-content: center; /* Zentriert den Inhalt horizontal */
   
@@ -91,6 +94,8 @@ body {
       grid-area: 1 / 2 / 2 / 3;
       background-color: #FFFFFF;
       color: black; /* Hier änderst du die Textfarbe auf schwarz */
+      padding: 1em 1em 1em 1em;
+      text-align: center;
       /*min-height: 50px;*/
       /*display: flex;*/
       justify-content: center; /* Zentriert den Inhalt horizontal */
@@ -119,9 +124,10 @@ body {
     #unten_violet {
     grid-area: 5 / 1 / 6 / 3;
     background-color: #A678EE;
+    min-height: 1.5fr;
     }
 
-    #feld_links_blau, #rechts_gelb, #rechts_rosa, #rechts_blau, #unten_violet{
+    #rechts_gelb, #rechts_rosa, #rechts_blau, #unten_violet{
         min-height: 8em;
         min-width: 30%;
         padding-left: 3em;
