@@ -1,7 +1,7 @@
 /* Grundlegende Einstellungen */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
+    font-family: 'koulen', sans-serif;
+    margin: 5em 5em 5em 5em;
     padding: 20px;
     background-color: #f0f0f0;
     color: #333;
@@ -21,7 +21,7 @@ body {
 
   h2 {
     color: #ffffff;
-    font-size: 50;
+    font-size: 75;
     font-family: 'Koulen', sans-serif;
     font-weight: regular;
     font-style: normal;
