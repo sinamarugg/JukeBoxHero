@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 async function fetchData() {
     try {
         // Der Pfad zur unload.php muss entsprechend deiner Server-Konfiguration angepasst werden
@@ -51,4 +50,3 @@ function createChart(data) {
 }
 
 fetchData();
->>>>>>> 006ab6202aea832cd87b489258d552ff60d5b526
