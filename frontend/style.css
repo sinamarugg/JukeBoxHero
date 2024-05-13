@@ -27,6 +27,14 @@ body {
     font-style: normal;
   }
 
+  h3 {
+    color: #000000;
+    font-size: 5.5em;
+    font-family: 'Koulen', sans-serif;
+    font-weight: regular;
+    font-style: normal;
+  } 
+
   p {
     color: #ffffff;
     font-size: 2em;
@@ -47,8 +55,8 @@ body {
   .knalligebox {
     margin-top: 5em;
     display: grid;
-    grid-row-gap: 40px;
-    grid-column-gap: 30px;
+    grid-row-gap: 3%;
+    grid-column-gap: 7%;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;;
     }
@@ -59,23 +67,24 @@ body {
     color: white; 
     /*min-height: 50px;*/
     padding: 1em 1em 1em 1em;
-    display: flex;
+    /*display: flex;*/
     justify-content: center; /* Zentriert den Inhalt horizontal */
   
     }
     
     #rechts_weiss {
-    grid-area: 1 / 2 / 2 / 3;
-    background-color: #FFFFFF;
-    color: black; 
-    max-height: 50%;
-    /*min-height: 50px;*/
-    display: flex;
-    justify-content: center; /* Zentriert den Inhalt horizontal */
-    /* font-size: 50px;  Setzt die Schriftgröße */
-    /* font-weight: bold;  Setzt die Schrift auf fett */
-    /* font-family: 'Koulen'sans-serif;  Setzt die Schriftart auf 'Koulen' */
-    }
+      grid-area: 1 / 2 / 2 / 3;
+      background-color: #FFFFFF;
+      color: black; /* Hier änderst du die Textfarbe auf schwarz */
+      /*min-height: 50px;*/
+      /*display: flex;*/
+      justify-content: center; /* Zentriert den Inhalt horizontal */
+      /* font-size: 50px;  Setzt die Schriftgröße */
+      /* font-weight: bold;  Setzt die Schrift auf fett */
+      /* font-family: 'Koulen'sans-serif;  Setzt die Schriftart auf 'Koulen' */
+
+      
+  }
         
     #rechts_gelb {
     grid-area: 2 / 2 / 3 / 3;
