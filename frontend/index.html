@@ -6,13 +6,16 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
     <style>
         /* Schriftart-Einbettung */
         @import url('https://fonts.googleapis.com/css2?family=Freeman&display=swap');
         
         /* Weitere Stile hier... */
     </style>
+
+    
+
+
 </head>
 <body>
 
@@ -34,9 +37,19 @@
             <div id="rechts_gelb"><h2>Album</h2><br><p>Erscheinungsjahr</p></div>
             <div id="rechts_rosa"><h2>Preview</h2></div>
             <div id="rechts_blau"><h2>Weiter zum Hit auf Spotify</h2></div>
-            <div id="unten_violet"><h2>Top 10 this week</h2><canvas id="chart"></canvas></div>
+            <div id="unten_violet">
+                <h2>Top 10 this week</h2>
+                <canvas id="myChart" width="400" height="400"></canvas>
+            </div>
         </div>
 
     </main>
+
+    
+    <script src="./library/chart.umd.js"></script>
+    <script src="./library/moment.js"></script>
+    <script src="./library/chartjs-adapter-moment.js"></script>
+    <script src="script.js"></script>
+
 </body>
 </html>
