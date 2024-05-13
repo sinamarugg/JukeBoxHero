@@ -16,6 +16,11 @@ body {
   }
   
   /* Grid mit farbigen Feldern */
+
+#logo {
+    width: 12rem; /* Breite des Logos */
+
+    }
   
   .knalligebox {
     display: grid;
