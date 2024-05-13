@@ -28,8 +28,13 @@ body {
   }
 
   p {
-    color: #333;
+    color: #ffffff;
+    font-size: 16;
+    font-family: 'Koulen', sans-serif;
+    font-weight: regular;
+    font-style: normal;
   }
+
   
   /* Grid mit farbigen Feldern */
 
@@ -72,9 +77,9 @@ body {
     padding-left: 25px; /* Angenommenes Padding links */
     display: flex;
     justify-content: center; /* Zentriert den Inhalt horizontal */
-    font-size: 50px; /* Setzt die Schriftgröße */
-    font-weight: bold; /* Setzt die Schrift auf fett */
-    font-family: 'Koulen'sans-serif; /* Setzt die Schriftart auf 'Koulen' */
+    /* font-size: 50px;  Setzt die Schriftgröße */
+    /*f ont-weight: bold;  Setzt die Schrift auf fett */
+    /* font-family: 'Koulen'sans-serif;  Setzt die Schriftart auf 'Koulen' */
     }
         
     #rechts_gelb {
