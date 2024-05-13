@@ -13,7 +13,7 @@ body {
   
   h1 {
     color: #ffffff;
-    font-size: 96;
+    font-size: 5.5em;
     font-family: 'Koulen', sans-serif;
     font-weight: regular;
     font-style: normal;
@@ -21,7 +21,7 @@ body {
 
   h2 {
     color: #ffffff;
-    font-size: 75;
+    font-size: 3em;
     font-family: 'Koulen', sans-serif;
     font-weight: regular;
     font-style: normal;
@@ -29,7 +29,7 @@ body {
 
   p {
     color: #ffffff;
-    font-size: 16;
+    font-size: 2em;
     font-family: 'Koulen', sans-serif;
     font-weight: regular;
     font-style: normal;
@@ -45,36 +45,31 @@ body {
     }
   
   .knalligebox {
+    margin-top: 5em;
     display: grid;
     grid-row-gap: 40px;
     grid-column-gap: 30px;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;;
     }
     
     #links_blau {
-    grid-area: 2 / 1 / 6 / 2;
+    grid-area: 1 / 1 / 5 / 2;
     background-color: #96C3C7;
     color: white; 
-    min-height: 50px;
-    padding-top: 50px; /* Reduziertes oberes Padding von 20px auf 10px */
-    padding-right: 25px; /* Angenommenes Padding rechts */
-    padding-bottom: 20px; /* Angenommenes Padding unten */
-    padding-left: 25px; /* Angenommenes Padding links */
+    /*min-height: 50px;*/
+    padding: 1em 1em 1em 1em;
     display: flex;
     justify-content: center; /* Zentriert den Inhalt horizontal */
-    font-size: 50px; /* Setzt die Schriftgröße */
+  
     }
     
     #rechts_weiss {
-    grid-area: 2 / 2 / 3 / 3;
+    grid-area: 1 / 2 / 2 / 3;
     background-color: #FFFFFF;
     color: black; 
-    min-height: 50px;
-    padding-top: 50px; /* Reduziertes oberes Padding von 20px auf 10px */
-    padding-right: 25px; /* Angenommenes Padding rechts */
-    padding-bottom: 20px; /* Angenommenes Padding unten */
-    padding-left: 25px; /* Angenommenes Padding links */
+    max-height: 50%;
+    /*min-height: 50px;*/
     display: flex;
     justify-content: center; /* Zentriert den Inhalt horizontal */
     /* font-size: 50px;  Setzt die Schriftgröße */
@@ -83,29 +78,33 @@ body {
     }
         
     #rechts_gelb {
-    grid-area: 3 / 2 / 4 / 3;
+    grid-area: 2 / 2 / 3 / 3;
     background-color: #D6B32E;
     }
     
     #rechts_rosa {
-    grid-area: 4 / 2 / 5 / 3;
+    grid-area: 3 / 2 / 4 / 3;
     background-color: #DA9FA9;
     }
     
     #rechts_blau {
-    grid-area: 5 / 2 / 6 / 3;
+    grid-area: 4 / 2 / 5 / 3;
     background-color: #55397F;
     }
 
     #unten_violet {
-    grid-area: 7 / 1 / 10 / 3;
+    grid-area: 5 / 1 / 6 / 3;
     background-color: #A678EE;
     }
 
     #feld_links_blau, #rechts_gelb, #rechts_rosa, #rechts_blau, #unten_violet{
-        min-height: 150px;
-        min-width: 100px;
+        min-height: 8em;
+        min-width: 30%;
+        padding-left: 3em;
+        padding-top: 1em;
     }
+
+  
   
     
     
