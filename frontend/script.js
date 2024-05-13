@@ -21,13 +21,11 @@ async function fetchData() {
 }
 
 function createChart(data) {
-    // Use a chart library of your choice (e.g., Chart.js) to create the chart
-    // Here's an example using Chart.js
     const labels = data.map(song => song.name);
     const playCounts = data.map(song => song.playCount);
 
     const ctx = document.getElementById('chart').getContext('2d');
-    new Chart(ctx, {
+    new Chart(ctx, {  // It should be 'Chart', not 'chart'
         type: 'bar',
         data: {
             labels: labels,
@@ -48,5 +46,3 @@ function createChart(data) {
         }
     });
 }
-
-fetchData();
