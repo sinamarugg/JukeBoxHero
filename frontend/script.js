@@ -34,12 +34,17 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // Check if preview URL is null or not
             if (topSong.preview_url === null) {
-                document.getElementById('songPreview').src = '';
-                document.getElementById('songPreview').setAttribute('controls', false);
-                document.getElementById('songPreview').textContent = 'Preview nicht verfügbar';
+                // If preview URL is null, remove audio controls and set text
+                const songPreview = document.getElementById('songPreview');
+                songPreview.parentNode.removeChild(songPreview); // Remove audio element
+                const previewText = document.createElement('p');
+                previewText.textContent = 'Preview nicht verfügbar';
+                document.getElementById('rechts_rosa').appendChild(previewText); // Add text
             } else {
-                document.getElementById('songPreview').src = topSong.preview_url;
-                document.getElementById('songPreview').setAttribute('controls', true);
+                // If preview URL is not null, set audio src and keep controls
+                const songPreview = document.getElementById('songPreview');
+                songPreview.src = topSong.preview_url;
+                songPreview.setAttribute('controls', true);
             }
 
         } catch (error) {
