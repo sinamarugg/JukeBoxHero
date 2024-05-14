@@ -58,6 +58,8 @@ body {
     font-family: "Freeman", sans-serif; 
     font-weight: 200; 
     font-style: normal;
+    margin: 0;
+    padding: 0;
   }
 
 
@@ -78,7 +80,7 @@ body {
 
 #logo {
 
-    width: 12rem; /* Breite des Logos */
+    width: 14rem; /* Breite des Logos */
 
     }
   
@@ -154,6 +156,7 @@ body {
     width: 40px; /* Setze die Breite der Bilder auf 2.5rem */
     height: auto; /* Automatische Höhe, um das Seitenverhältnis beizubehalten */
     margin-bottom: 0.5em; /* Abstand unter dem Bild */
+    margin right: 1.5em;
 }
 
 #unten_violet img {
