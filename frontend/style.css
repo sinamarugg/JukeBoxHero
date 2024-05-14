@@ -173,6 +173,17 @@ body {
   align-items: center; /* Elemente vertikal zentrieren */
 }
 
+#rechts_rosa {
+  display: flex;
+  flex-direction: row; /* Elemente vertikal anordnen */
+}
+
+
+#rechts_rosa div {
+  display: flex;
+  flex-direction: column; /* Elemente vertikal anordnen */
+}
+
 #rechts_gelb img, #rechts_rosa img, #rechts_blau img {
   margin-right: 1em; /* Abstand zwischen Icon und Text */
   width: 5em; /* Breite des Icons */
