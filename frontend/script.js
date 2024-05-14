@@ -1,68 +1,39 @@
-// Warten bis DOM vollständig geladen ist
 document.addEventListener('DOMContentLoaded', () => {
-    
-    // Variabeln Global deklarieren
-   // const apiUrl = 'https://257285-5.web.fhgr.ch/unload.php';
+    const apiUrl = 'https://257285-5.web.fhgr.ch/unload.php';
+    const chartContainerId = 'myChart';
 
-    function createChart(data) {
-        const labels = data.map(song => song.name);
-        const playCounts = data.map(song => song.playCount);
-
-        const ctx = document.getElementById('chart').getContext('2d');
-        new Chart(ctx, {  // It should be 'Chart', not 'chart'
-            type: 'bar',
-            data: {
-                labels: labels,
-                datasets: [{
-                    label: 'Play Count',
-                    data: playCounts,
-                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                    borderColor: 'rgba(75, 192, 192, 1)',
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                }
-            }
-        });
-    }
-
-    async function fetchData() {
+    // Fetch data from the server and handle the data
+    async function fetchDataAndCreateChart() {
         try {
-            // Der Pfad zur unload.php muss entsprechend deiner Server-Konfiguration angepasst werden
-            const response = await fetch('https://257285-5.web.fhgr.ch/unload.php');
-            const data = await response.json();
-            // Verarbeite die Daten hier
-            console.log(data);
-
-            // Sort the data by play count in descending order
-            const sortedData = data.sort((a, b) => b.playCount - a.playCount);
-
-            // Get the top 10 songs
-            const top10Songs = sortedData.slice(0, 10);
-
-            // Create a chart using the top 10 songs
-            createChart(top10Songs);
+            const response = await fetch(apiUrl);
+            if (!response.ok) {
+                throw new Error('Network response was not ok.');
+            }
+            const songs = await response.json();
+            const sortedAndTopSongs = sortAndSliceData(songs);
+            createChart(sortedAndTopSongs, chartContainerId);
         } catch (error) {
             console.error('Fehler beim Abrufen der Daten:', error);
         }
     }
 
-    function createChart(data) {
-        const labels = data.map(song => song.name);
-        const playCounts = data.map(song => song.playCount);
+    // Sort the song data and get the top 10 songs
+    function sortAndSliceData(data) {
+        return data.sort((a, b) => b.times_played - a.times_played).slice(0, 10);
+    }
 
-        const ctx = document.getElementById('mychart').getContext('2d');
-        new Chart(ctx, {  // It should be 'Chart', not 'chart'
+    // Create a bar chart using Chart.js
+    function createChart(data, containerId) {
+        const labels = data.map(song => `${song.interpret} - ${song.title}`);
+        const playCounts = data.map(song => song.times_played);
+
+        const ctx = document.getElementById(containerId).getContext('2d');
+        new Chart(ctx, {
             type: 'bar',
             data: {
                 labels: labels,
                 datasets: [{
-                    label: 'Play Count',
+                    label: 'Wiedergabeanzahl',
                     data: playCounts,
                     backgroundColor: 'rgba(75, 192, 192, 0.2)',
                     borderColor: 'rgba(75, 192, 192, 1)',
@@ -70,41 +41,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 }]
             },
             options: {
+                indexAxis: 'y',  // Horizontal bars
                 scales: {
-                    y: {
+                    x: {
                         beginAtZero: true
+                    }
+                },
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'right'
                     }
                 }
             }
         });
     }
 
-
-    fetchData();
-
-
-
+    fetchDataAndCreateChart();
 });
-
-
-  const ctx = document.getElementById('myChart');
-
-  new Chart(ctx, {
-    type: 'bar',
-    data: {
-      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-      datasets: [{
-        label: '# of Votes',
-        data: [12, 19, 3, 5, 2, 3],
-        borderWidth: 1
-      }]
-    },
-    options: {
-      scales: {
-        y: {
-          beginAtZero: true
-        }
-      }
-    }
-  });
-
