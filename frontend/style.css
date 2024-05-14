@@ -40,7 +40,6 @@ body {
     font-style: normal;
     margin: 0;
     padding: 0;
-    align-items: center;
   }
 
   h3 {
@@ -125,6 +124,7 @@ body {
     #rechts_gelb {
     grid-area: 2 / 2 / 3 / 3;
     background-color: #D6B32E;
+    align-items: center;
     }
     
     #rechts_rosa {
@@ -157,7 +157,7 @@ body {
     width: 40px; /* Setze die Breite der Bilder auf 2.5rem */
     height: auto; /* Automatische Höhe, um das Seitenverhältnis beizubehalten */
     margin-bottom: 0.5em; /* Abstand unter dem Bild */
-    margin-right: 1.5em;
+    margin-right: 5em; /* Abstand rechts vom Bild */
 }
 
 #unten_violet img {
