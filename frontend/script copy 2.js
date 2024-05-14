@@ -82,27 +82,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 indexAxis: 'y',  // Horizontal bars
                 scales: {
                     x: {
-                        beginAtZero: true,
-                        ticks: {
-                            color: '#ffffff', // Farbe der Beschriftung der X-Achse
-                            font: {
-                                family: 'freeman-regular',
-                                weight: 'regular'
-                            }
-                        },
-                        grid: {
-                            display: false // Rasterlinien nicht anzeigen
-                        }
-                    },
-                    y: {
-                        beginAtZero: true,
-                        ticks: {
-                            color: '#ffffff', // Farbe der Beschriftung der Y-Achse
-                            font: {
-                                family: 'freeman-regular',
-                                weight: 'regular'
-                            }
-                        }
+                        beginAtZero: true
+                    
                     }
                 },
                 responsive: true,
@@ -110,15 +91,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     legend: {
                         position: 'right'
                     },
-                    title: {
-                        display: true,
-                        text: 'Wiedergabeanzahl nach Song',
-                        color: '#ffffff', // Schriftfarbe des Titels
-                        font: {
-                            family: 'freeman-regular',
-                            weight: 'regular'
-                        }
-                    }
                 }
             }
         });
