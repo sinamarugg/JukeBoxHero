@@ -35,19 +35,23 @@
                 <div id="weeklyHitInfo">
                     <img id="albumCover" src="" alt="Album Cover">
                     <h2 id="weeklySongTitle">Songtitel</h2>
-                    <h2 id="weeklyInterpret">Interpret</h2> </div></div>
+                    <h2 id="weeklyInterpret">Interpret</h2>
+                    <p id="albumInfo"></p> <!-- Hier wird das Erscheinungsjahr und der Albumname angezeigt -->
+                </div>
+            </div>
             <div id="rechts_weiss"><h3>INSIGHTS</h3></div>
-            <div id="rechts_gelb"><h2>Album</h2><br><p>Erscheinungsjahr</p></div>
+            <div id="rechts_gelb">
+                <h2 id="albumYear"></h2> <!-- Hier wird das Erscheinungsjahr angezeigt -->
+                <h2 id="albumName"></h2> <!-- Hier wird der Albumname angezeigt -->
+            </div>
             <div id="rechts_rosa"><h2>Preview</h2></div>
-            <div id="rechts_blau"><h2>Weiter zum Hit auf Spotify</h2></div>
+            <div id="rechts_blau"><a href="#" id="spotifyLink">Weiter zum Hit auf Spotify</a></div>
             <div id="unten_violet">
                 <h2>Top 10 this week</h2>
                 <canvas id="myChart" width="800" height="400"></canvas>
             </div>
         </div>
-
     </main>
-
     
     <script src="./library/chart.umd.js"></script>
     <script src="./library/moment.js"></script>
