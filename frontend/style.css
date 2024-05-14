@@ -150,11 +150,24 @@ body {
 }
 
 
-#rechts_gelb h2 p,
-#rechts_rosa h2 p,
-#rechts_blau h2 p, {
-    padding-left: 25%;
+
+#rechts_gelb, #rechts_rosa, #rechts_blau {
+  display: flex;
+  align-items: center; /* Elemente vertikal zentrieren */
 }
+
+#rechts_gelb img, #rechts_rosa img, #rechts_blau img {
+  margin-right: 1em; /* Abstand zwischen Icon und Text */
+  width: 40px; /* Breite des Icons */
+  height: auto; /* Automatische Höhe, um das Seitenverhältnis beizubehalten */
+}
+
+#rechts_gelb div, #rechts_rosa div, #rechts_blau div {
+  flex: 1; /* Flexibles Layout, um Text rechts auszurichten */
+}
+
+
+
   
   
     
