@@ -1,6 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     const apiUrl = 'https://257285-5.web.fhgr.ch/unload.php';
     const chartContainerId = 'myChart';
+    const weeklyHitInfo = document.getElementById('weeklyHitInfo');
+    const weeklySongTitle = document.getElementById('weeklySongTitle');
+    const weeklyInterpret = document.getElementById('weeklyInterpret');
+    const albumCover = document.getElementById('albumCover');
 
     // Fetch data from the server and handle the data
     async function fetchDataAndCreateChart() {
@@ -12,6 +16,14 @@ document.addEventListener('DOMContentLoaded', () => {
             const songs = await response.json();
             const sortedAndTopSongs = sortAndSliceData(songs);
             createChart(sortedAndTopSongs, chartContainerId);
+
+            // Update weekly hit info with top song
+            const topSong = sortedAndTopSongs[0];
+            weeklySongTitle.textContent = topSong.title;
+            weeklyInterpret.textContent = topSong.interpret;
+            // Assume the album cover URL is available in the song data
+            albumCover.src = topSong.albumCoverUrl;
+            albumCover.alt = `${topSong.title} Album Cover`;
         } catch (error) {
             console.error('Fehler beim Abrufen der Daten:', error);
         }
