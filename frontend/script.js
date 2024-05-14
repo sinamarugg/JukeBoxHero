@@ -108,8 +108,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 responsive: true,
                 plugins: {
                     legend: {
-                        position: 'right'
-                    },
+                        display: true, // Display legend
+                        position: 'top', // Position legend on top
+                        labels: {
+                            color: '#ffffff', // Set legend label color to white
+                            font: {
+                                family: 'freeman-regular',
+                                weight: 'regular'
+                            }
+                        }
+                    }
                 }
             }
         });
