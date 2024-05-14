@@ -115,7 +115,6 @@ document.addEventListener('DOMContentLoaded', () => {
                             font: {
                                 family: 'Freeman',
                                 weight: '200'
-                                fontSize: 35 // Increase font size;
                             }
                         }
                     }
