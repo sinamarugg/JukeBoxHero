@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             }
                         },
                         grid: {
-                            display: false // Rasterlinien nicht anzeigen
+                            display: false
                         }
                     },
                     y: {
@@ -108,17 +108,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 responsive: true,
                 plugins: {
                     legend: {
-                        position: 'right'
-                    },
-                    title: {
-                        display: true,
-                        text: 'Wiedergabeanzahl nach Song',
-                        color: '#ffffff', // Schriftfarbe des Titels
+                        position: 'top'
+                        color: '#ffffff', // Farbe der Legende
                         font: {
                             family: 'freeman-regular',
                             weight: 'regular'
                         }
-                    }
+                    },
                 }
             }
         });
