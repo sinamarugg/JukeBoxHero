@@ -110,15 +110,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     legend: {
                         position: 'right'
                     },
-                    title: {
-                        display: true,
-                        text: 'Wiedergabeanzahl nach Song',
-                        color: '#ffffff', // Schriftfarbe des Titels
-                        font: {
-                            family: 'freeman-regular',
-                            weight: 'regular'
-                        }
-                    }
                 }
             }
         });
