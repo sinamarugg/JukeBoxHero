@@ -39,18 +39,27 @@ document.addEventListener('DOMContentLoaded', () => {
             // Set Spotify link and preview URL
             document.getElementById('spotifyLink').href = topSong.spotify_url;
             
-            // Check if preview URL is null or not
-            if (topSong.preview_url === null) {
-                const songPreview = document.getElementById('songPreview');
-                songPreview.parentNode.removeChild(songPreview); // Remove audio element
-                const previewText = document.createElement('p');
-                previewText.textContent = 'Preview nicht verfügbar';
-                document.getElementById('rechts_rosa').appendChild(previewText); // Add text
-            } else {
-                const songPreview = document.getElementById('songPreview');
-                songPreview.src = topSong.preview_url;
-                songPreview.setAttribute('controls', true);
-            }
+           // Check if preview URL is null or not
+if (topSong.preview_url === null) {
+    const songPreview = document.getElementById('songPreview');
+    songPreview.parentNode.removeChild(songPreview); // Remove audio element
+    
+    // Create line break element
+    const lineBreak = document.createElement('br');
+    
+    // Create preview text element
+    const previewText = document.createElement('p');
+    previewText.textContent = 'Preview nicht verfügbar';
+
+    // Add line break and text to the 'rechts_rosa' element
+    const rechtsRosa = document.getElementById('rechts_rosa');
+    rechtsRosa.appendChild(lineBreak);
+    rechtsRosa.appendChild(previewText);
+} else {
+    const songPreview = document.getElementById('songPreview');
+    songPreview.src = topSong.preview_url;
+    songPreview.setAttribute('controls', true);
+}
 
         } catch (error) {
             console.error('Fehler beim Abrufen der Daten:', error);
