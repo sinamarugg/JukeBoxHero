@@ -114,7 +114,8 @@ document.addEventListener('DOMContentLoaded', () => {
                             color: '#ffffff', // Set legend label color to white
                             font: {
                                 family: 'Freeman',
-                                weight: '400'
+                                weight: '200'
+                                fontSize: 35 // Increase font size;
                             }
                         }
                     }
