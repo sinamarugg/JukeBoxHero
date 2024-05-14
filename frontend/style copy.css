@@ -58,24 +58,39 @@ body {
     font-family: "Freeman", sans-serif; 
     font-weight: 200; 
     font-style: normal;
+    margin: 0;
+    padding: 0;
   }
+
+
+#spotifyLink {
+  color: #ffffff;
+  font-size: 3em;
+  font-family: "Freeman", sans-serif; /* Verwende die Schriftart "Freeman", falls verfügbar, andernfalls eine generische sans-serif Schriftart */
+  font-weight: 400; /* Normalgewicht (Regular) */
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
 
   
   /* Grid mit farbigen Feldern */
 
 #logo {
 
-    width: 12rem; /* Breite des Logos */
+    width: 14rem; /* Breite des Logos */
 
     }
   
   .knalligebox {
-    margin-top: 5em;
+    margin-top: 3em;
     display: grid;
     grid-row-gap: 3%;
     grid-column-gap: 7%;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.3fr 0.5fr 0.5fr 0.5fr 1fr;
+    grid-template-rows: 0.3fr 0.5fr 0.5fr 0.5fr 2fr;
     }
     
     #links_blau {
@@ -109,6 +124,7 @@ body {
     #rechts_gelb {
     grid-area: 2 / 2 / 3 / 3;
     background-color: #D6B32E;
+    align-items: center;
     }
     
     #rechts_rosa {
@@ -124,15 +140,73 @@ body {
     #unten_violet {
     grid-area: 5 / 1 / 6 / 3;
     background-color: #A678EE;
-    min-height: 1.5fr;
+    padding-top: 2em;
+    padding-bottom: 6em;
     }
 
     #rechts_gelb, #rechts_rosa, #rechts_blau, #unten_violet{
         min-height: 8em;
         min-width: 30%;
         padding-left: 3em;
-        padding-top: 1em;
     }
+
+
+#rechts_gelb img,
+#rechts_rosa img,
+#rechts_blau img {
+    width: 40px; /* Setze die Breite der Bilder auf 2.5rem */
+    height: auto; /* Automatische Höhe, um das Seitenverhältnis beizubehalten */
+    margin-bottom: 0.5em; /* Abstand unter dem Bild */
+    margin-right: 5em; /* Abstand rechts vom Bild */
+}
+
+#unten_violet img {
+    width: 40px; /* Setze die Breite des Bildes auf 4rem */
+    height: auto; /* Automatische Höhe, um das Seitenverhältnis beizubehalten */
+    margin-bottom: 0.5em; /* Abstand unter dem Bild */
+}
+
+
+
+#rechts_gelb, #rechts_rosa, #rechts_blau {
+  display: flex;
+  align-items: center; /* Elemente vertikal zentrieren */
+}
+
+#rechts_rosa {
+  display: flex;
+  flex-direction: row; /* Elemente vertikal anordnen */
+}
+
+
+#rechts_rosa div {
+  display: flex;
+  flex-direction: column; /* Elemente vertikal anordnen */
+}
+
+#rechts_gelb img, #rechts_rosa img, #rechts_blau img {
+  margin-right: 1em; /* Abstand zwischen Icon und Text */
+  width: 5em; /* Breite des Icons */
+  height: auto; /* Automatische Höhe, um das Seitenverhältnis beizubehalten */
+}
+
+#rechts_gelb div, #rechts_rosa div, #rechts_blau div {
+  flex: 1; /* Flexibles Layout, um Text rechts auszurichten */
+}
+
+
+#albumCover {
+  width: 70%;
+  height: auto;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+#myChart {
+  width: 80%;
+  height: auto;
+}
+
 
   
   

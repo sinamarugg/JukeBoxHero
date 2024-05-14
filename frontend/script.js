@@ -73,8 +73,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 datasets: [{
                     label: 'Wiedergabeanzahl',
                     data: playCounts,
-                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                    borderColor: 'rgba(75, 192, 192, 1)',
+                    backgroundColor: '#D6B32E', // Farbe der Balken
+                    borderColor: '#D6B32E', // Farbe des Balkenrandes
                     borderWidth: 1
                 }]
             },
@@ -89,6 +89,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 plugins: {
                     legend: {
                         position: 'right'
+                    },
+                    title: {
+                        display: true,
+                        text: 'Wiedergabeanzahl nach Song',
+                        color: '#ffffff', // Schriftfarbe des Titels
+                        font: {
+                            family: 'Freeman',
+                            weight: 'regular'
+                        }
                     }
                 }
             }

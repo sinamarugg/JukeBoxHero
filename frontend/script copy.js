@@ -42,10 +42,8 @@ document.addEventListener('DOMContentLoaded', () => {
             // Check if preview URL is null or not
             if (topSong.preview_url === null) {
                 const songPreview = document.getElementById('songPreview');
-                songPreview.parentNode.removeChild(songPreview); // Remove audio element
-                const previewText = document.createElement('p');
-                previewText.textContent = 'Preview nicht verfügbar';
-                document.getElementById('rechts_rosa').appendChild(previewText); // Add text
+                songPreview.parentNode.removeChild(songPreview); // Remove audio element;
+                document.getElementById('noPreview').innerHTML = 'Preview nicht verfügbar'; // Add text
             } else {
                 const songPreview = document.getElementById('songPreview');
                 songPreview.src = topSong.preview_url;
