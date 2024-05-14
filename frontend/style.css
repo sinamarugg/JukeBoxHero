@@ -1,72 +1,155 @@
 /* Grundlegende Einstellungen */
+
+
+
 body {
-  font: 'freeman-regular';
-  margin: 5em 5em 5em 5em;
-  padding: 20px;
-  background-color: #f0f0f0;
-  color: #333;
-  background-image: url('./img/Hintergrund.png');
-  background-repeat: repeat-y;
+    font: 'freeman-regular';
+    margin: 5em 5em 5em 5em;
+    padding: 20px;
+    background-color: #f0f0f0;
+    color: #333;
+    background-image: url('./img/Hintergrund.png');
+    background-repeat: repeat-y;
+    /* background-image: url('./img/Hintergrund.svg');
+    background-repeat: repeat-y; */
+  }
+  
+  .freeman-regular {
+    font-family: "Freeman", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+
+  h1 {
+    color: #ffffff; /* Weiße Farbe */
+    font-size: 5.5em; /* Schriftgröße */
+    font-family: "Freeman", sans-serif; /* Verwende die Schriftart "Freeman", falls verfügbar, andernfalls eine generische sans-serif Schriftart */
+    font-weight: 400; /* Normalgewicht (Regular) */
+    font-style: normal; /* Normaler Stil (nicht kursiv) */
+    margin: 0; /* Kein Außenabstand */
+    padding: 0; /* Kein Innenabstand */
 }
 
-.freeman-regular {
-  font-family: "Freeman", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
+  h2 {
+    color: #ffffff;
+    font-size: 3em;
+    font-family: "Freeman", sans-serif; /* Verwende die Schriftart "Freeman", falls verfügbar, andernfalls eine generische sans-serif Schriftart */
+    font-weight: 400; /* Normalgewicht (Regular) */
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+  }
 
-h1, h2, h3, p {
-  margin: 0;
-  padding: 0;
-}
+  h3 {
+    color: #000000;
+    font-size: 5.5em;
+    font-family: "Freeman", sans-serif; /* Verwende die Schriftart "Freeman", falls verfügbar, andernfalls eine generische sans-serif Schriftart */
+    font-weight: 400; /* Normalgewicht (Regular) */
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+  } 
 
-/* Grid mit farbigen Feldern */
+  p {
+    color: #ffffff;
+    font-size: 2em;
+    font-family: "Freeman", sans-serif; 
+    font-weight: 200; 
+    font-style: normal;
+  }
+
+  
+  /* Grid mit farbigen Feldern */
+
 #logo {
-  width: 12rem; /* Breite des Logos */
-}
 
-.knalligebox {
-  margin-top: 5em;
-  display: grid;
-  grid-row-gap: 3%;
-  grid-column-gap: 7%;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 0.3fr 0.5fr 0.5fr 0.5fr 1fr;
-}
+    width: 12rem; /* Breite des Logos */
 
-#links_blau {
-  grid-area: 1 / 1 / 5 / 2;
-  background-color: #96C3C7;
-  color: white; 
-  padding: 1em;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+    }
+  
+  .knalligebox {
+    margin-top: 5em;
+    display: grid;
+    grid-row-gap: 3%;
+    grid-column-gap: 7%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.3fr 0.5fr 0.5fr 0.5fr 1fr;
+    }
+    
+    #links_blau {
+    grid-area: 1 / 1 / 5 / 2;
+    background-color: #96C3C7;
+    color: white; 
+    /*min-height: 50px;*/
+    padding: 1em 1em 1em 1em;
+    text-align: center;
+    /*display: flex;*/
+    justify-content: center; /* Zentriert den Inhalt horizontal */
+  
+    }
+    
+    #rechts_weiss {
+      grid-area: 1 / 2 / 2 / 3;
+      background-color: #FFFFFF;
+      color: black; /* Hier änderst du die Textfarbe auf schwarz */
+      padding: 1em 1em 1em 1em;
+      text-align: center;
+      /*min-height: 50px;*/
+      /*display: flex;*/
+      justify-content: center; /* Zentriert den Inhalt horizontal */
+      /* font-size: 50px;  Setzt die Schriftgröße */
+      /* font-weight: bold;  Setzt die Schrift auf fett */
+      /* font-family: 'Koulen'sans-serif;  Setzt die Schriftart auf 'Koulen' */
 
-#rechts_weiss, #rechts_gelb, #rechts_rosa, #rechts_blau, #unten_violet {
-  background-color: #FFFFFF;
-  color: black;
-  padding: 1em;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+      
+  }
+        
+    #rechts_gelb {
+    grid-area: 2 / 2 / 3 / 3;
+    background-color: #D6B32E;
+    }
+    
+    #rechts_rosa {
+    grid-area: 3 / 2 / 4 / 3;
+    background-color: #DA9FA9;
+    }
+    
+    #rechts_blau {
+    grid-area: 4 / 2 / 5 / 3;
+    background-color: #55397F;
+    }
+
+    #unten_violet {
+    grid-area: 5 / 1 / 6 / 3;
+    background-color: #A678EE;
+    min-height: 1.5fr;
+    }
+
+    #rechts_gelb, #rechts_rosa, #rechts_blau, #unten_violet{
+        min-height: 8em;
+        min-width: 30%;
+        padding-left: 3em;
+        padding-top: 1em;
+    }
+
 
 #rechts_gelb img,
 #rechts_rosa img,
 #rechts_blau img {
-  width: 2.5rem; /* Setze die Breite der Bilder auf 2.5rem */
-  height: auto; /* Automatische Höhe, um das Seitenverhältnis beizubehalten */
-  margin-bottom: 0.5em; /* Abstand unter dem Bild */
+    width: 2.5rem; /* Setze die Breite der Bilder auf 2.5rem */
+    height: auto; /* Automatische Höhe, um das Seitenverhältnis beizubehalten */
+    margin-bottom: 0.5em; /* Abstand unter dem Bild */
 }
 
 #unten_violet img {
-  width: 4rem; /* Setze die Breite des Bildes auf 4rem */
-  height: auto; /* Automatische Höhe, um das Seitenverhältnis beizubehalten */
-  margin-bottom: 0.5em; /* Abstand unter dem Bild */
+    width: 4rem; /* Setze die Breite des Bildes auf 4rem */
+    height: auto; /* Automatische Höhe, um das Seitenverhältnis beizubehalten */
+    margin-bottom: 0.5em; /* Abstand unter dem Bild */
 }
+
+  
+  
+    
+    
