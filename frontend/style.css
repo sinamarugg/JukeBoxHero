@@ -158,7 +158,7 @@ body {
 
 #rechts_gelb img, #rechts_rosa img, #rechts_blau img {
   margin-right: 1em; /* Abstand zwischen Icon und Text */
-  width: 3.5em; /* Breite des Icons */
+  width: 5em; /* Breite des Icons */
   height: auto; /* Automatische Höhe, um das Seitenverhältnis beizubehalten */
 }
 
