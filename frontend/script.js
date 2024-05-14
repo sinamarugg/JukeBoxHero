@@ -5,10 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const weeklySongTitle = document.getElementById('weeklySongTitle');
     const weeklyInterpret = document.getElementById('weeklyInterpret');
     const albumCover = document.getElementById('albumCover');
-    const albumInfo = document.getElementById('albumInfo');
-    const albumYear = document.getElementById('albumYear');
-    const albumName = document.getElementById('albumName');
-    const spotifyLink = document.getElementById('spotifyLink');
+    
 
     // Fetch data from the server and handle the data
     async function fetchDataAndCreateChart() {
@@ -25,16 +22,18 @@ document.addEventListener('DOMContentLoaded', () => {
             const topSong = sortedAndTopSongs[0];
             weeklySongTitle.textContent = topSong.title;
             weeklyInterpret.textContent = topSong.interpret;
+            // Assume the album cover URL is available in the song data
             albumCover.src = topSong.albumCoverUrl;
             albumCover.alt = `${topSong.title} Album Cover`;
 
-            // Update album info
-            albumInfo.textContent = `${topSong.albumName} (${topSong.albumYear})`;
-            albumYear.textContent = topSong.albumYear;
-            albumName.textContent = topSong.albumName;
+            // Update album name and release year
+            document.getElementById('albumName').textContent = topSong.album_name;
+            document.getElementById('albumReleaseYear').textContent = topSong.release_date;
 
-            // Update Spotify link
-            spotifyLink.href = topSong.spotifyLink;
+            // Set Spotify link and preview URL
+            document.getElementById('spotifyLink').href = topSong.spotify_url;
+            document.getElementById('songPreview').src = topSong.preview_url;
+
         } catch (error) {
             console.error('Fehler beim Abrufen der Daten:', error);
         }
