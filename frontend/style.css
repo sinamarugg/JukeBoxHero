@@ -201,6 +201,11 @@ body {
   margin-bottom: 2em;
 }
 
+#myChart {
+  width: 80%;
+  height: auto;
+}
+
 
   
   
