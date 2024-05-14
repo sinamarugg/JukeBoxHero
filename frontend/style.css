@@ -138,7 +138,7 @@ body {
 #rechts_gelb img,
 #rechts_rosa img,
 #rechts_blau img {
-    width: 2.5rem; /* Setze die Breite der Bilder auf 2.5rem */
+    width: 4 rem; /* Setze die Breite der Bilder auf 2.5rem */
     height: auto; /* Automatische Höhe, um das Seitenverhältnis beizubehalten */
     margin-bottom: 0.5em; /* Abstand unter dem Bild */
 }
@@ -149,6 +149,12 @@ body {
     margin-bottom: 0.5em; /* Abstand unter dem Bild */
 }
 
+
+#rechts_gelb h2,
+#rechts_rosa h2,
+#rechts_blau h2 {
+    padding-left: 25%;
+}
   
   
     
