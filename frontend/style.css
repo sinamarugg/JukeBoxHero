@@ -85,7 +85,7 @@ body {
     }
   
   .knalligebox {
-    margin-top: 5em;
+    margin-top: 3em;
     display: grid;
     grid-row-gap: 3%;
     grid-column-gap: 7%;
