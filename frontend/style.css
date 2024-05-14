@@ -138,21 +138,21 @@ body {
 #rechts_gelb img,
 #rechts_rosa img,
 #rechts_blau img {
-    width: 4 rem; /* Setze die Breite der Bilder auf 2.5rem */
+    width: 40px; /* Setze die Breite der Bilder auf 2.5rem */
     height: auto; /* Automatische Höhe, um das Seitenverhältnis beizubehalten */
     margin-bottom: 0.5em; /* Abstand unter dem Bild */
 }
 
 #unten_violet img {
-    width: 4rem; /* Setze die Breite des Bildes auf 4rem */
+    width: 40px; /* Setze die Breite des Bildes auf 4rem */
     height: auto; /* Automatische Höhe, um das Seitenverhältnis beizubehalten */
     margin-bottom: 0.5em; /* Abstand unter dem Bild */
 }
 
 
-#rechts_gelb h2,
-#rechts_rosa h2,
-#rechts_blau h2 {
+#rechts_gelb h2 p,
+#rechts_rosa h2 p,
+#rechts_blau h2 p, {
     padding-left: 25%;
 }
   
