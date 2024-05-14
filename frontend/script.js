@@ -91,8 +91,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     legend: {
                         position: 'right'
                     },
-                        }
-                    }
                 }
             }
         });
