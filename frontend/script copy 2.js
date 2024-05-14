@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const weeklySongTitle = document.getElementById('weeklySongTitle');
     const weeklyInterpret = document.getElementById('weeklyInterpret');
     const albumCover = document.getElementById('albumCover');
+    
 
     // Fetch data from the server and handle the data
     async function fetchDataAndCreateChart() {
@@ -31,16 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Set Spotify link and preview URL
             document.getElementById('spotifyLink').href = topSong.spotify_url;
-            
-            // Check if preview URL is null or not
-            if (topSong.preview_url === null) {
-                document.getElementById('songPreview').src = '';
-                document.getElementById('songPreview').setAttribute('controls', false);
-                document.getElementById('songPreview').textContent = 'Preview nicht verfügbar';
-            } else {
-                document.getElementById('songPreview').src = topSong.preview_url;
-                document.getElementById('songPreview').setAttribute('controls', true);
-            }
+            document.getElementById('songPreview').src = topSong.preview_url;
 
         } catch (error) {
             console.error('Fehler beim Abrufen der Daten:', error);
