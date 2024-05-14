@@ -60,6 +60,18 @@ body {
     font-style: normal;
   }
 
+
+#spotifyLink {
+  color: #ffffff;
+  font-size: 3em;
+  font-family: "Freeman", sans-serif; /* Verwende die Schriftart "Freeman", falls verfügbar, andernfalls eine generische sans-serif Schriftart */
+  font-weight: 400; /* Normalgewicht (Regular) */
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+}
+
+
   
   /* Grid mit farbigen Feldern */
 
