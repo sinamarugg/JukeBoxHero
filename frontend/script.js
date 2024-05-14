@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
             weeklySongTitle.textContent = topSong.title;
             weeklyInterpret.textContent = topSong.interpret;
             // Assume the album cover URL is available in the song data
-            albumCover.src = topSong.albumCoverUrl;
+            albumCover.src = topSong.image_url;
             albumCover.alt = `${topSong.title} Album Cover`;
 
             // Update album name and release year
