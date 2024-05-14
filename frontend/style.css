@@ -90,7 +90,7 @@ body {
     grid-row-gap: 3%;
     grid-column-gap: 7%;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.3fr 0.5fr 0.5fr 0.5fr 1fr;
+    grid-template-rows: 0.3fr 0.5fr 0.5fr 0.5fr 2fr;
     }
     
     #links_blau {
@@ -140,7 +140,8 @@ body {
     #unten_violet {
     grid-area: 5 / 1 / 6 / 3;
     background-color: #A678EE;
-    min-height: 1.5fr;
+    padding-top: 2em;
+    padding-bottom: 6em;
     }
 
     #rechts_gelb, #rechts_rosa, #rechts_blau, #unten_violet{
