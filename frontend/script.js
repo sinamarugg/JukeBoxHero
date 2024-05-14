@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     data: playCounts,
                     backgroundColor: '#D6B32E', // Farbe der Balken
                     borderColor: '#D6B32E', // Farbe des Balkenrandes
-                    borderWidth: 1
+                    borderWidth: 0
                 }]
             },
             options: {
@@ -83,6 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 scales: {
                     x: {
                         beginAtZero: true
+                    
                     }
                 },
                 responsive: true,
