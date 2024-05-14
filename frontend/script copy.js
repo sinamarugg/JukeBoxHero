@@ -21,9 +21,37 @@ document.addEventListener('DOMContentLoaded', () => {
             const topSong = sortedAndTopSongs[0];
             weeklySongTitle.textContent = topSong.title;
             weeklyInterpret.textContent = topSong.interpret;
-            // Assume the album cover URL is available in the song data
-            albumCover.src = topSong.albumCoverUrl;
+            albumCover.src = topSong.image_url;
             albumCover.alt = `${topSong.title} Album Cover`;
+
+            // Update album name
+            document.getElementById('albumName').textContent = topSong.album_name;
+
+            // Format and update the release date
+            const releaseDate = new Date(topSong.release_date);
+            const formattedDate = new Intl.DateTimeFormat('de-DE', {
+                day: '2-digit',
+                month: '2-digit',
+                year: 'numeric'
+            }).format(releaseDate);
+            document.getElementById('albumReleaseYear').textContent = formattedDate;
+
+            // Set Spotify link and preview URL
+            document.getElementById('spotifyLink').href = topSong.spotify_url;
+            
+            // Check if preview URL is null or not
+            if (topSong.preview_url === null) {
+                const songPreview = document.getElementById('songPreview');
+                songPreview.parentNode.removeChild(songPreview); // Remove audio element
+                const previewText = document.createElement('p');
+                previewText.textContent = 'Preview nicht verfügbar';
+                document.getElementById('rechts_rosa').appendChild(previewText); // Add text
+            } else {
+                const songPreview = document.getElementById('songPreview');
+                songPreview.src = topSong.preview_url;
+                songPreview.setAttribute('controls', true);
+            }
+
         } catch (error) {
             console.error('Fehler beim Abrufen der Daten:', error);
         }
