@@ -235,7 +235,7 @@ body {
 
   /* Platzieren des Logos oben auf der linken Seite */
   #logo {
-      width: 40%; /* Kleineres Logo */
+      width: 40%; /* Anpassung der Breite des Logos */
       align-self: flex-start; /* Platzieren des Logos oben auf der Seite */
   }
 
