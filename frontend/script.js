@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 plugins: {
                     legend: {
                         display: true, // Display legend
-                        position: 'top', // Position legend on top
+                        position: 'bottom', // Position legend on top
                         labels: {
                             color: '#ffffff', // Set legend label color to white
                             font: {

@@ -75,14 +75,14 @@ body {
 }
 
 
-  
-  /* Grid mit farbigen Feldern */
-
 #logo {
 
     width: 14rem; /* Breite des Logos */
 
     }
+
+
+  /* Grid mit farbigen Feldern */
   
   .knalligebox {
     margin-top: 3em;
