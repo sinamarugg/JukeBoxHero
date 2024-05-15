@@ -144,6 +144,7 @@ body {
     padding-bottom: 6em;
     padding-left: 3em;
     padding-right: 3em;
+    text-align: center;
     }
 
     #rechts_gelb, #rechts_rosa, #rechts_blau, #unten_violet{
@@ -209,8 +210,8 @@ body {
   height: auto;
 }
 
-#unten_violet h1 {
-  margin-bottom: 2em;
+#unten_violet h2 {
+  margin-bottom: 1.5em;
 }
 
 
