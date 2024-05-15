@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Schriftart-Einbettung */
+        @import url('https://fonts.googleapis.com/css2?family=Freeman&display=swap');
+        
+        /* Weitere Stile hier... */
+    </style>
+
+    
+
+
+</head>
+<body>
+
+    <main>
+        <header>
+            <!--LOGO -->
+            <img id="logo" src="img/JUKEBOXHERO_LOGO_ROSA.png " alt="Logo">
+        </header>
+        </header>
+
+
+    <main>
+
+        <div class="knalligebox">
+            <div id="links_blau">
+                <h1>WEEKLY HIT</h1>
+                <div id="weeklyHitInfo">
+                    <img id="albumCover" src="" alt="Album Cover">
+                    <h2 id="weeklySongTitle">Songtitel</h2>
+                    <h2 id="weeklyInterpret">Interpret</h2> 
+                </div>
+            </div>
+            <div id="rechts_weiss"><h3>INSIGHTS</h3></div>
+            <div id="rechts_gelb">
+                <img src="img/schallplatte weiss.png" alt="Schallplatte">
+                <div>
+                    <h2 id="albumName">Album</h2>
+                    <p id="albumReleaseYear">Erscheinungsjahr</p>
+                </div>
+            </div>
+            <div id="rechts_rosa">
+                <img src="img/playbutton.png" alt="Play Button">
+                <div>
+                    
+                    <h2>Preview</h2>
+                    <p id="noPreview"></p>
+                    <audio id="songPreview" controls src="">Your browser does not support the audio tag.</audio>
+                </div>
+            </div>
+            <div id="rechts_blau">
+                <img src="img/Spotify.png" alt="Spotify Logo">
+                <div>
+                    <a id="spotifyLink" href="" target="_blank">Auf Spotify anhören</a>
+                </div>
+            </div>
+            
+            <div id="unten_violet">
+                <h2>Top 10 this week</h2>
+                <canvas id="myChart"></canvas>
+            </div>
+        </div>
+
+    </main>
+
+    
+    <script src="./library/chart.umd.js"></script>
+    <script src="./library/moment.js"></script>
+    <script src="./library/chartjs-adapter-moment.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
