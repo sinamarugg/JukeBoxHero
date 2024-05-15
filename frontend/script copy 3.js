@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Check if preview URL is null or not
             if (topSong.preview_url === null) {
                 const songPreview = document.getElementById('songPreview');
-                songPreview.parentNode.removeChild(songPreview); // Remove audio element;
+                songPreview.parentNode.removeChild(songPreview); // Remove audio element
                 document.getElementById('noPreview').innerHTML = 'Preview nicht verfügbar'; // Add text
             } else {
                 const songPreview = document.getElementById('songPreview');
@@ -60,60 +60,83 @@ document.addEventListener('DOMContentLoaded', () => {
         return data.sort((a, b) => b.times_played - a.times_played).slice(0, 10);
     }
 
+    function checkIfDesktop() {
+        const isDesktop = window.innerWidth >= 1200;
+        return isDesktop;
+    }
+
     // Create a bar chart using Chart.js
     function createChart(data, containerId) {
-        const labels = data.map(song => `${song.interpret} - ${song.title}`);
+        console.log(window.innerWidth);
+        const isMobile = window.innerWidth < 1200; // Check for mobile view
+        const isDesktop = checkIfDesktop();
+        console.log(isDesktop);
+        //const labels = data.map(song => `${song.interpret} - ${song.title}`);
+        
+        const labels = isMobile ? data.map(() => '') : data.map(song => `${song.interpret} - ${song.title}`);
         const playCounts = data.map(song => song.times_played);
-
         const ctx = document.getElementById(containerId).getContext('2d');
-        new Chart(ctx, {
+        const chart = new Chart(ctx, {
             type: 'bar',
             data: {
                 labels: labels,
                 datasets: [{
                     label: 'Wiedergabeanzahl',
-                    data: playCounts,
-                    backgroundColor: '#D6B32E', // Farbe der Balken
-                    borderColor: '#D6B32E', // Farbe des Balkenrandes
+                    data: playCounts, labels,
+                    backgroundColor: '#D6B32E', // Bar color
+                    borderColor: '#D6B32E', // Border color
                     borderWidth: 0
                 }]
             },
             options: {
-                indexAxis: 'y',  // Horizontal bars
+                indexAxis: 'y',
                 responsive: true,
                 maintainAspectRatio: false,
                 scales: {
                     x: {
                         beginAtZero: true,
                         ticks: {
-                            color: '#ffffff', // Farbe der Beschriftung der X-Achse
+                            color: '#ffffff',
                             font: {
                                 family: 'freeman-regular',
                                 weight: 'regular'
                             }
                         },
                         grid: {
-                            display: false // Rasterlinien nicht anzeigen
+                            display: false
                         }
                     },
                     y: {
                         beginAtZero: true,
                         ticks: {
-                            color: '#ffffff', // Farbe der Beschriftung der Y-Achse
+                            display: true,
+                            color: '#ffffff',
                             font: {
                                 family: 'freeman-regular',
                                 weight: 'regular'
-                            }
-                        }
+                            }/*,
+                        
+                            callback: function(value, index, values) {
+                                return labels ? '' : value;
+                            }*/
+                        },
+                        grid: {
+                            borderColor: '#ffffff',
+                        },
+
+                        barThickness: 30,
+                        maxBarThickness: 30,
+                        barPercentage: 0.5,
+                        categoryPercentage: 1
                     }
                 },
                 responsive: true,
                 plugins: {
                     legend: {
-                        display: true, // Display legend
-                        position: 'bottom', // Position legend on top
+                        display: true,
+                        position: 'bottom',
                         labels: {
-                            color: '#ffffff', // Set legend label color to white
+                            color: '#ffffff',
                             font: {
                                 family: 'Freeman',
                                 weight: '200'
