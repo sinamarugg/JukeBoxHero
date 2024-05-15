@@ -235,7 +235,7 @@ body {
 
   /* Platzieren des Logos oben auf der linken Seite */
   #logo {
-      width: 70%; /* Anpassung der Breite des Logos */
+      width: 50%; /* Anpassung der Breite des Logos */
       align-self: flex-start; /* Platzieren des Logos oben auf der Seite */
   }
 
@@ -248,7 +248,7 @@ body {
   /* Passe die Größe des Diagramms an */
   #myChart {
       width: 100%;
-      height: 600px; /* Erhöhe die Höhe des Diagramms, um alle Songtitel anzuzeigen */
+      height: auto; /* Automatische Höhe, um alle Songtitel anzuzeigen */
   }
 
   /* Passe die Textgrößen und Abstände an */
@@ -269,6 +269,7 @@ body {
   /* Passe die Größe der Schaltfläche "Auf Spotify anhören" an */
   #spotifyLink {
       font-size: 1.3em; /* Reduziere die Schriftgröße */
-      padding: 0.5em 1em; /* Passe den Innenabstand an */
+      padding: 0.5em 0; /* Passe den Innenabstand an */
+      display: inline-block; /* Stelle sicher, dass die Schaltfläche inline angezeigt wird */
   }
 }
