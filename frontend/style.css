@@ -219,7 +219,7 @@ body {
   
 
    
-       /* Media Query für Bildschirme mit einer maximalen Breite von 414px (iPhone 15 Pro) */
+ /* Media Query für Bildschirme mit einer maximalen Breite von 414px (iPhone 15 Pro) */
 @media only screen and (max-width: 414px) {
   body {
       margin: 1em; /* Reduziere den Seitenabstand */
@@ -233,9 +233,10 @@ body {
       gap: 1em;
   }
 
-  /* Passe die Größe des Logos an */
+  /* Platzieren des Logos oben auf der linken Seite */
   #logo {
-      width: 100%; /* Fülle die Bildschirmbreite */
+      width: 70%; /* Anpassung der Breite des Logos */
+      align-self: flex-start; /* Platzieren des Logos oben auf der Seite */
   }
 
   /* Passe die Größe des Albumcovers an */
@@ -247,7 +248,7 @@ body {
   /* Passe die Größe des Diagramms an */
   #myChart {
       width: 100%;
-      max-width: 300px; /* Begrenze die maximale Breite */
+      height: 600px; /* Erhöhe die Höhe des Diagramms, um alle Songtitel anzuzeigen */
   }
 
   /* Passe die Textgrößen und Abstände an */
@@ -271,6 +272,3 @@ body {
       padding: 0.5em 1em; /* Passe den Innenabstand an */
   }
 }
-
-
-   
