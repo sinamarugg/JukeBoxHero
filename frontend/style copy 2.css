@@ -219,51 +219,57 @@ body {
   
 /* Responsive Design für mobile Geräte */
    
+/* Media Query für Bildschirme mit einer maximalen Breite von 414px (iPhone 15 Pro) */
 @media only screen and (max-width: 414px) {
   body {
-      margin: 1em;
+      margin: 1em; /* Reduziere den Seitenabstand */
       padding: 10px;
   }
 
+  /* Ändere das Rasterlayout für kleine Bildschirme */
   .knalligebox {
       display: flex;
       flex-direction: column;
-      gap: 2em;
+      gap: 2em; /* Größerer Abstand zwischen den Elementen */
   }
 
+  /* Platzieren des Logos oben auf der linken Seite */
   #logo {
-      width: 40%;
-      align-self: flex-start;
+      width: 40%; /* Anpassung der Breite des Logos */
+      align-self: flex-start; /* Platzieren des Logos oben auf der Seite */
   }
 
+  /* Passe die Größe des Albumcovers an */
   #albumCover {
       width: 100%;
-      max-width: 200px;
+      max-width: 200px; /* Begrenze die maximale Breite */
   }
 
+  /* Passe die Größe des Diagramms an */
   #myChart {
       width: 100%;
-      height: 300px; /* Automatische Höhe, um das Diagramm vollständig anzuzeigen */
+      height: auto; /* Automatische Höhe, um alle Songtitel anzuzeigen */
   }
 
+  /* Passe die Textgrößen und Abstände an */
   h1, h2, h3, p, #spotifyLink {
-      font-size: 1.5em;
-      margin: 0.5em 0;
+      font-size: 1.5em; /* Reduziere die Schriftgröße */
+      margin: 0.5em 0; /* Verringere den Abstand oberhalb und unterhalb der Texte */
   }
 
+  /* Verberge das Vorschaudiagramm, wenn kein Audio verfügbar ist */
+  #noPreview {
+      display: block; /* Zeige den Text an */
+  }
+
+  #songPreview {
+      display: none; /* Verstecke das Audio-Element */
+  }
+
+  /* Passe die Größe der Schaltfläche "Auf Spotify anhören" an */
   #spotifyLink {
-      font-size: 1.3em;
-      padding: 0.5em 0;
-      display: inline-block;
-  }
-
-  .chartContainer {
-      width: 100%; /* Setze die Breite auf 100% für eine volle Ausdehnung */
-      height: 150%; /* Stelle die Höhe automatisch ein, basierend auf dem Inhalt */
-  }
-
-  /* Stelle sicher, dass das Canvas-Element sichtbar bleibt */
-  .chartContainer canvas {
-      display: block; /* Behalte das Canvas, auf dem das Chart gezeichnet wird */
+      font-size: 1.3em; /* Reduziere die Schriftgröße */
+      padding: 0.5em 0; /* Passe den Innenabstand an */
+      display: inline-block; /* Stelle sicher, dass die Schaltfläche inline angezeigt wird */
   }
 }
