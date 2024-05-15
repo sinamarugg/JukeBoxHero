@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 labels: labels,
                 datasets: [{
                     label: 'Wiedergabeanzahl',
-                    data: playCounts,
+                    data: playCounts, labels,
                     backgroundColor: '#D6B32E', // Bar color
                     borderColor: '#D6B32E', // Border color
                     borderWidth: 0
