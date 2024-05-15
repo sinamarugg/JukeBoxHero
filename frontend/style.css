@@ -217,9 +217,9 @@ body {
 
   
   
-
+/* Responsive Design für mobile Geräte */
    
- /* Media Query für Bildschirme mit einer maximalen Breite von 414px (iPhone 15 Pro) */
+/* Media Query für Bildschirme mit einer maximalen Breite von 414px (iPhone 15 Pro) */
 @media only screen and (max-width: 414px) {
   body {
       margin: 1em; /* Reduziere den Seitenabstand */
@@ -230,12 +230,12 @@ body {
   .knalligebox {
       display: flex;
       flex-direction: column;
-      gap: 1em;
+      gap: 2em; /* Größerer Abstand zwischen den Elementen */
   }
 
   /* Platzieren des Logos oben auf der linken Seite */
   #logo {
-      width: 50%; /* Anpassung der Breite des Logos */
+      width: 40%; /* Kleineres Logo */
       align-self: flex-start; /* Platzieren des Logos oben auf der Seite */
   }
 
