@@ -60,12 +60,21 @@ document.addEventListener('DOMContentLoaded', () => {
         return data.sort((a, b) => b.times_played - a.times_played).slice(0, 10);
     }
 
+    function checkIfDesktop() {
+        const isDesktop = window.innerWidth >= 1200;
+        return isDesktop;
+    }
+
     // Create a bar chart using Chart.js
     function createChart(data, containerId) {
-        const isMobile = window.innerWidth <= 414; // Check for mobile view
+        console.log(window.innerWidth);
+        const isMobile = window.innerWidth < 1200; // Check for mobile view
+        const isDesktop = checkIfDesktop();
+        console.log(isDesktop);
+        //const labels = data.map(song => `${song.interpret} - ${song.title}`);
+        
         const labels = isMobile ? data.map(() => '') : data.map(song => `${song.interpret} - ${song.title}`);
         const playCounts = data.map(song => song.times_played);
-
         const ctx = document.getElementById(containerId).getContext('2d');
         const chart = new Chart(ctx, {
             type: 'bar',
@@ -81,6 +90,8 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             options: {
                 indexAxis: 'y',
+               // responsive: true,
+                //maintainAspectRatio: false,
                 scales: {
                     x: {
                         beginAtZero: true,
@@ -103,11 +114,16 @@ document.addEventListener('DOMContentLoaded', () => {
                             font: {
                                 family: 'freeman-regular',
                                 weight: 'regular'
-                            },
+                            }/*,
+                        
                             callback: function(value, index, values) {
-                                return isMobile ? '' : value;
-                            }
+                                return labels ? '' : value;
+                            }*/
                         },
+                        grid: {
+                            borderColor: '#ffffff',
+                        },
+
                         barThickness: 30,
                         maxBarThickness: 30,
                         barPercentage: 0.5,
