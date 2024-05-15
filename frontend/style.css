@@ -267,3 +267,21 @@ body {
       display: block; /* Behalte das Canvas, auf dem das Chart gezeichnet wird */
   }
 }
+
+
+
+
+.grosseGrafik {
+  width: 100%;
+  height: auto;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+@media screen and (max-width: 1024px) {
+  .grosseGrafik {
+      width: 300px;
+      height: 600px;
+  }
+  
+}
