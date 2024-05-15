@@ -90,8 +90,8 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             options: {
                 indexAxis: 'y',
-               // responsive: true,
-                //maintainAspectRatio: false,
+                responsive: true,
+                maintainAspectRatio: false,
                 scales: {
                     x: {
                         beginAtZero: true,
