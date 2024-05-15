@@ -71,8 +71,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const isMobile = window.innerWidth < 1200; // Check for mobile view
         const isDesktop = checkIfDesktop();
         console.log(isDesktop);
+        //const labels = data.map(song => `${song.interpret} - ${song.title}`);
         
-        const labels = isMobile ? data.map(song => `${song.interpret} - ${song.title} (${song.times_played})`) : data.map(song => `${song.interpret} - ${song.title}`);
+        const labels = isMobile ? data.map(() => '') : data.map(song => `${song.interpret} - ${song.title}`);
         const playCounts = data.map(song => song.times_played);
         const ctx = document.getElementById(containerId).getContext('2d');
         const chart = new Chart(ctx, {
@@ -139,17 +140,6 @@ document.addEventListener('DOMContentLoaded', () => {
                             font: {
                                 family: 'Freeman',
                                 weight: '200'
-                            }
-                        }
-                    },
-                    tooltip: {
-                        callbacks: {
-                            label: function(context) {
-                                const label = context.dataset.label || '';
-                                if (label) {
-                                    return `${label}: ${context.parsed.y}`;
-                                }
-                                return `${context.parsed.y}`;
                             }
                         }
                     }
